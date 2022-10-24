@@ -1,2 +1,4 @@
-package com.liceu.geom.model;public class Figura {
+package com.liceu.geom.model;
+
+public class Figura {
 }
