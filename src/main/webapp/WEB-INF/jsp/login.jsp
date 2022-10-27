@@ -13,10 +13,9 @@
    <form method="post" action="/login">
                 Usuari: <input type="text" name="user">
                 <br>
-                Password: <input type="password" name="password">
-                <br>
+
                 <input type="submit" value="envia">
-           </form>
+   </form>
 
 </body>
 </html>
