@@ -5,63 +5,149 @@
 
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
+      <!--  <link rel="stylesheet" href="style.css"> --> 
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Figures</title>
     </head>
 
 <body>
 
-<h1> Ventana Principal </h1>
+    <h1>Figures</h1>
+    <canvas id="canvas" width="640" height="480" style="border: solid black 1px;" onclick="drawPreview()"></canvas>
+    <form action="/figures" method="post">
 
-<canvas id="myCanvas" width="640" height="480" style="border:1px solid #000000;">
-</canvas><br>
+        <label for="figures" >Tipus de Figura:</label>
+        <select name="figures" id="figures" width="100">
+            <option value="circle" >Cercle</option>
+            <option value="square">Quadrat</option>
+            <option value="triangle">Triangle</option>
+            <option value="pentagon">Pentagon</option>
+            <option value="star">Estrella</option>
+        </select>
 
-Tipo de figura:
-<select name="figuras" id="figuras">
-  <option value="circulo"> Circulo</option>
-  <option value="Cuadrado">Cuadrado</option>
-  <option value="Triangulo">Triangulo</option> 
-  <option value="Estrella">Estrella</option>
-</select>
+        <label for="color">Color:</label>
+        <select name="color" id="color">
+            <option value="black">Negre</option>
+            <option value="green">Verd</option>
+            <option value="red">Vermell</option>
+            <option value="blue">Blau</option>
+            <option value="yellow">Groc</option>
+            <option value="gray">Gris</option>
+        </select>   
 
-colores:
-<select name="colores" id="colores">
-  <option value="Black"> BLACK</option>
-  <option value="Green">GREEN</option>
-  <option value="Red">RED</option>
-  <option value="Blue">BLUE</option>
-  <option value="Estrella">YELLOW</option>
-  <option value="Estrella">GRAY</option>
-</select>
-<input type="range"> <input type="number" name="coordenada1"> <input type="number" name="coordenada2">
+        <label for="xCord">Coordenada X:</label>
+        <input type="number" name="xCord" id="xCord" >
 
-<input type="submit" value="envia">
-<input type="submit" value="preview">
+        <label for="yCord">Coordenada Y:</label>
+        <input type="number" name="yCord" id="yCord">
+
+        <br>
+        <label for="size" onclick="drawPreview()">Grandaria</label>
+        <input type="range" name="size" id="size">
+
+        <br>
+
+        <input type="submit" value="Crear firgura">
+    </form>
+
+    <button onclick="drawPreview()">Previsualitza</button>
 
 <script>
-  let tipo = $Black
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext("2d");
+
+function drawPreview() {
+  let size = document.getElementById("size").value;
+  let xCord = document.getElementById("xCord").value;
+  let yCord = document.getElementById("yCord").value;
+  let figura = document.getElementById("figures").value;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  switch (figura) {
+        case "circle":
+            
+            ctx.beginPath();
+            ctx.arc(xCord, yCord, size, 0, 2 * Math.PI);
+            ctx.fillStyle = document.getElementById("color").value;
+            ctx.fill();
+            break;
+
+        case "square":
+        ctx.beginPath();
+        ctx.beginPath();
+        ctx.rect(xCord, yCord, size, size);
+        ctx.fillStyle = document.getElementById("color").value;
+        ctx.fill();
+        break;
+        case "triangle":
+            //configurar
+        ctx.beginPath();
+        ctx.moveTo(xCord, yCord);
+        ctx.lineTo((xCord), (yCord + size));
+        ctx.lineTo((xCord + size), yCord);
+        ctx.closePath();
+        ctx.fillStyle = document.getElementById("color").value;
+        ctx.fill();
+            break;
+        case "pentagon":
+           
+        let numberOfSides = 5;
+        let radius=size;
+
+
+        let angle = 2*Math.PI/numberOfSides;
+        ctx.beginPath();
+        ctx.translate(xCord, yCord);
+        ctx.moveTo (radius*Math.cos(0), radius*Math.sin(0));
+        for (var i = 1; i <= numberOfSides; i++) {
+            ctx.lineTo (radius*Math.cos(i * angle), radius*Math.sin(i * angle));
+        }
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+
+        ctx.closePath();
+        ctx.fillStyle = document.getElementById("color").value;
+        ctx.fill();
+            break;
+
+        case "star":
+            //configurar
+        let n = 7;
+        let R = size;
+        let r = size / 2;
+
+        ctx.beginPath();
+        ctx.translate(xCord, yCord);
+        for (let i = 0; i < n; i++) {
+            ctx.lineTo(Math.cos(((1 / 4 + i) * 2 * Math.PI / n)) * R, -Math.sin(((1 / 4 + i) * 2 * Math.PI / n)) * R);
+            ctx.lineTo(Math.cos(((3 / 4 + i) * 2 * Math.PI / n)) * r, -Math.sin(((3 / 4 + i) * 2 * Math.PI / n)) * r);
+        }
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+
+        ctx.closePath();
+        ctx.fillStyle = document.getElementById("color").value;
+        
+        
+        ctx.fill();;
+                break;
+            case "composed":
+
+                chooseType(figura,xCord, yCord, size, ctx.fillStyle);
+                chooseType(figura,xCord, yCord, size, ctx.fillStyle);
+            default:
+                break;
+
+    }
+
+
+    
+    
+
+}
+
 
 </script>
 
 
-
-
-
-
-
-
-<!-- Circulo -->
-
-<script>
-
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.beginPath();
-ctx.arc(95, 50, 40, 0, 2 * Math.PI);
-ctx.stroke();
-
-
-
-
-
-</script>
 </body></html>

@@ -4,25 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7ebeb03-5e59-4ac2-852a-0ccc29181ccb" name="Changes" comment="Crear clases iniciales">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/DAO/MessageDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/DAO/MessageDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/IndexControllers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/VentanaPrincipal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/model/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/services/Circulo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/services/Cuadrado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/services/TextService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/creador.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/figures.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" afterDir="false" />
+    <list default="true" id="e7ebeb03-5e59-4ac2-852a-0ccc29181ccb" name="Changes" comment="Ejemplo Pere clase">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/services/FiguraService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/Hello.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/model/Figura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/model/Figura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/model/Usuari.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/model/Usuari.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/services/Cuadrado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/creador.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/figures.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/figures.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,14 +40,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/fmont/IdeaProjects/testTomcat"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/fmont/IdeaProjects/testTomcat&quot;
   }
-}]]></component>
+}</component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn deploy" />
@@ -107,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666635480840</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Ejemplo Pere clase">
+      <created>1666896070648</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666896070648</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,6 +121,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Crear clases iniciales" />
-    <option name="LAST_COMMIT_MESSAGE" value="Crear clases iniciales" />
+    <MESSAGE value="Ejemplo Pere clase" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ejemplo Pere clase" />
   </component>
 </project>
