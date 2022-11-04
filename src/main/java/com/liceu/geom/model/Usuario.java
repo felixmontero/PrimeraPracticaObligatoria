@@ -1,20 +1,22 @@
 package com.liceu.geom.model;
 
-public class Usuari {
-    int id;
-    String nombre;
+public class Usuario {
 
-    public Usuari(int id,String nombre){
-        this.id=id;
+    int idUsuario;
+    String nombre;
+    public Usuario(){}
+
+    public Usuario(int id, String nombre){
+        this.idUsuario=id;
         this.nombre=nombre;
     }
 
     public int getId() {
-        return id;
+        return idUsuario;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.idUsuario = id;
     }
 
     public String getNombre() {

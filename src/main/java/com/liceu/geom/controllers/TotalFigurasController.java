@@ -1,7 +1,8 @@
 package com.liceu.geom.controllers;
 
+import com.liceu.geom.model.Figura;
 import com.liceu.geom.model.Message;
-import com.liceu.geom.services.TextService;
+import com.liceu.geom.services.FiguraService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,24 +12,26 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+@WebServlet("/totalFigures")
+public class TotalFigurasController extends HttpServlet {
 
-@WebServlet("/index")
-public class IndexControllers extends HttpServlet {
-    TextService textService = new TextService();
-
-    @Override
+    FiguraService figuraService = new FiguraService();
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Message> messages = textService.getAllMessages();
-        req.setAttribute("messages", messages);
+        List<Figura> figures =figuraService.getFigures();
+
+        req.setAttribute("figures",figures);
+
         RequestDispatcher dispatcher =
-                req.getRequestDispatcher("/WEB-INF/jsp/index.jsp");
+                req.getRequestDispatcher("/WEB-INF/jsp/totalFigures.jsp");
         dispatcher.forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String text = req.getParameter("text");
-        textService.newText(text);
-        resp.sendRedirect("/index");
+
+
+        RequestDispatcher dispatcher =
+                req.getRequestDispatcher("/WEB-INF/jsp/totalFigures.jsp");
+        dispatcher.forward(req, resp);
     }
 }

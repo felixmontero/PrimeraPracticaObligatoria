@@ -1,19 +1,46 @@
 package com.liceu.geom.model;
 
 public class Figura {
+    String nombreFigura;
     String tipo;
     int xCord;
     int yCord;
     int size;
     String color;
-    public Figura( String tipo,int xCord,int yCord,int size,String color) {
+    int idFigura;
+    int idUsuario;
+public Figura(){}
+    public Figura(String nombreFigura,String tipo,int xCord,int yCord,int size,String color,int idUsuario) {
         this.tipo= tipo;
         this.xCord=xCord;
         this.yCord=yCord;
         this.size=size;
         this.color=color;
+        this.idUsuario=idUsuario;
     }
 
+    public String getNombreFigura() {
+        return nombreFigura;
+    }
+
+    public void setNombreFigura(String nombreFigura) {
+        this.nombreFigura = nombreFigura;
+    }
+
+    public int getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+    public int getIdFigura() {
+        return idFigura;
+    }
+
+    public void setIdFigura(int idFigura) {
+        this.idFigura = idFigura;
+    }
     public String getTipo() {
         return tipo;
     }
