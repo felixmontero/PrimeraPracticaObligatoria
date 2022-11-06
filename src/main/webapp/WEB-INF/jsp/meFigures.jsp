@@ -17,18 +17,20 @@
 
     <table>
       <tr>
-        <th>id</th>
-        <th>tipus</th>
-        <th>coords</th>
-        <th>user</th>
+            <th>id</th>
+            <th>nombre</th>
+            <th>tipus</th>
+            <th>coords</th>
+            <th>user</th>
 
       </tr>
       <c:forEach var="figura" items="${figures}">
-        <tr>
-          <td>${figura.idFigura}</td>
-          <td>${figura.tipo}</td>
-          <td>${figura.xCord} ${figura.yCord}</td>
-          <td>${figura.idUsuario}</td>
+          <tr>
+            <td>${figura.idFigura}</td>
+            <td>${figura.nombreFigura}</td>
+            <td>${figura.tipo}</td>
+            <td>${figura.xCord} ${figura.yCord}</td>
+            <td>${figura.idUsuario}</td>
         </tr>
       </c:forEach>
     </table>

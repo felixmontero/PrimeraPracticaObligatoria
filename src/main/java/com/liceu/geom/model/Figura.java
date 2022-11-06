@@ -11,6 +11,7 @@ public class Figura {
     int idUsuario;
 public Figura(){}
     public Figura(String nombreFigura,String tipo,int xCord,int yCord,int size,String color,int idUsuario) {
+        this.nombreFigura=nombreFigura;
         this.tipo= tipo;
         this.xCord=xCord;
         this.yCord=yCord;

@@ -10,6 +10,7 @@ import java.util.List;
 public class FiguraService {
     static int id = 1;
     FiguraDAO figuraDAO = new FiguraDAOImpl();
+    //FiguraService figuraService = new FiguraService();
 
     public Figura guardarFigura(String nombreFigura, String tipo, int xCord, int yCord, int size, String color, int idUsuario) {
 
@@ -35,8 +36,10 @@ public class FiguraService {
     }
 
     public List<Figura> getMeFigures(int idSession) {
-        if (figuraDAO.getAllMeFiguras().size() > 0) {
-            figuraDAO.getAllMeFiguras().remove(figuraDAO.getAllMeFiguras().size()-1);
+        List<Figura> misFiguras = figuraDAO.getAllFiguras();
+        for (Figura figura : misFiguras) {
+        //if (figuraDAO.getAllMeFiguras().size() > 0) {
+            figuraDAO.getAllMeFiguras().remove(figura);
         }
         for (Figura figura : figuraDAO.getAllFiguras()) {
             if (figura.getIdUsuario() == idSession) {
@@ -44,5 +47,18 @@ public class FiguraService {
             }
         }
         return figuraDAO.getAllMeFiguras();
+    }
+
+    public boolean comprobacionNombre (String nombreFigura){
+        List<Figura> misFiguras = figuraDAO.getAllFiguras();
+
+        for (Figura figura : misFiguras) {
+
+            if(nombreFigura.equals(figura.getNombreFigura())){
+                return true;
+            }
+
+        }
+       return false;
     }
 }
