@@ -12,11 +12,12 @@ public class FiguraService {
     FiguraDAO figuraDAO = new FiguraDAOImpl();
     //FiguraService figuraService = new FiguraService();
 
-    public Figura guardarFigura(String nombreFigura, String tipo, int xCord, int yCord, int size, String color, int idUsuario) {
+    public Figura guardarFigura(String nombreFigura, String tipo,String fecha, int xCord, int yCord, int size, String color, int idUsuario) {
 
         Figura figura = new Figura();
         figura.setIdFigura(id);
         figura.setNombreFigura(nombreFigura);
+        figura.setFecha(fecha);
         figura.setColor(color);
         figura.setTipo(tipo);
         figura.setSize(size);

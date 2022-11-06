@@ -3,6 +3,7 @@ package com.liceu.geom.model;
 public class Figura {
     String nombreFigura;
     String tipo;
+    String fecha;
     int xCord;
     int yCord;
     int size;
@@ -10,14 +11,23 @@ public class Figura {
     int idFigura;
     int idUsuario;
 public Figura(){}
-    public Figura(String nombreFigura,String tipo,int xCord,int yCord,int size,String color,int idUsuario) {
+    public Figura(String nombreFigura,String tipo,String fecha,int xCord,int yCord,int size,String color,int idUsuario) {
         this.nombreFigura=nombreFigura;
+        this.fecha=fecha;
         this.tipo= tipo;
         this.xCord=xCord;
         this.yCord=yCord;
         this.size=size;
         this.color=color;
         this.idUsuario=idUsuario;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 
     public String getNombreFigura() {

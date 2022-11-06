@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7ebeb03-5e59-4ac2-852a-0ccc29181ccb" name="Changes" comment="Cambiar nombre figura (sin mirar id)">
+    <list default="true" id="e7ebeb03-5e59-4ac2-852a-0ccc29181ccb" name="Changes" comment="Cambiar nombre figura (con id)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/VentanaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/VentanaPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/model/Figura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/model/Figura.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/services/FiguraService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/services/FiguraService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/meFigures.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/meFigures.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/totalFigures.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/totalFigures.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667707811421</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Cambiar nombre figura (con id)">
+      <created>1667736971838</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1667736971838</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,6 +170,7 @@
     <MESSAGE value="Tabla de todas las figuras y lista para mis figuras" />
     <MESSAGE value="MeFiguras (lista con todas las figuras del usuario)" />
     <MESSAGE value="Cambiar nombre figura (sin mirar id)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambiar nombre figura (sin mirar id)" />
+    <MESSAGE value="Cambiar nombre figura (con id)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambiar nombre figura (con id)" />
   </component>
 </project>

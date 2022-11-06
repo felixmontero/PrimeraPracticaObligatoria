@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @WebServlet("/ventanaPrincipal")
@@ -53,7 +56,11 @@ public class VentanaPrincipal extends HttpServlet {
             nombreRepetido = figuraService.comprobacionNombre(nombreFigura, sessionId);
         } while (nombreRepetido);
 
-        figuraService.guardarFigura(nombreFigura, tipoFigura, coordenadaX, coordenadaY, size, tipoFigura, (int) session.getAttribute("id"));
+        DateFormat dateFormat = new SimpleDateFormat("d MMM yyyy, HH:mm:ss z");
+
+        String date = dateFormat.format(new Date());
+
+        figuraService.guardarFigura(nombreFigura, tipoFigura,date, coordenadaX, coordenadaY, size, tipoFigura, (int) session.getAttribute("id"));
         RequestDispatcher dispatcher =
                 req.getRequestDispatcher("/WEB-INF/jsp/figures.jsp");
         dispatcher.forward(req, resp);
