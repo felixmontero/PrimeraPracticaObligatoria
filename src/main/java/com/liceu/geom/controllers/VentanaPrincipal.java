@@ -1,5 +1,6 @@
 package com.liceu.geom.controllers;
 
+import com.liceu.geom.model.Figura;
 import com.liceu.geom.services.FiguraService;
 
 import javax.servlet.RequestDispatcher;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet("/ventanaPrincipal")
 public class VentanaPrincipal extends HttpServlet {
@@ -38,13 +40,18 @@ public class VentanaPrincipal extends HttpServlet {
         boolean nombreRepetido = false;
 
 
-        nombreRepetido = figuraService.comprobacionNombre(nombreFigura);
+        session.getAttribute("id");
+        int sessionId = (int) session.getAttribute("id");
 
-        if (nombreFigura.isEmpty() || nombreRepetido) {
-            int numeroRandom = (int) (Math.random() * 10 + 1);
-            nombreFigura = tipoFigura + numeroRandom;
-        }
+        do {
+            nombreRepetido = figuraService.comprobacionNombre(nombreFigura, sessionId);
 
+            if (nombreFigura.isEmpty() || nombreRepetido) {
+                int numeroRandom = (int) (Math.random() * 10 + 1);
+                nombreFigura = tipoFigura + numeroRandom;
+            }
+            nombreRepetido = figuraService.comprobacionNombre(nombreFigura, sessionId);
+        } while (nombreRepetido);
 
         figuraService.guardarFigura(nombreFigura, tipoFigura, coordenadaX, coordenadaY, size, tipoFigura, (int) session.getAttribute("id"));
         RequestDispatcher dispatcher =

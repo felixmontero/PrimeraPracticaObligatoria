@@ -49,15 +49,15 @@ public class FiguraService {
         return figuraDAO.getAllMeFiguras();
     }
 
-    public boolean comprobacionNombre (String nombreFigura){
+    public boolean comprobacionNombre (String nombreFigura,int idSession){
         List<Figura> misFiguras = figuraDAO.getAllFiguras();
 
         for (Figura figura : misFiguras) {
-
-            if(nombreFigura.equals(figura.getNombreFigura())){
-                return true;
+            if (figura.getIdUsuario() == idSession) {
+                if (nombreFigura.equals(figura.getNombreFigura())) {
+                    return true;
+                }
             }
-
         }
        return false;
     }
