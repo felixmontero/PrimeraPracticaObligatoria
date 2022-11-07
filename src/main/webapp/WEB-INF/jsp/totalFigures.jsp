@@ -24,7 +24,7 @@
         <th>coordenada Y</th>
         <th>user</th>
         <th>Fecha</th>
-        <th>Acciones</th>
+        <th>Accions</th>
         
       </tr>
       <c:forEach var="figura" items="${figures}">
@@ -43,12 +43,24 @@
             </form>
         </td>
         <td>
-            <form action="/eliminarFigura" method="post">
+            <form action="/eliminarFigura" method="post" onsubmit=" return popup()">
                 <input type="hidden" name="idFigura" id="idFigura" value="${figura.idFigura}">
                 <input type="submit" value="Borrar">
             </form>
-        </tr>
+        </td>
       </c:forEach>
     </table>
+
+    <script>
+      function popup() {
+        var txt;
+        if (confirm("Vols eliminar aquesta figura?")) {
+          return true;
+        } else {
+          return false;
+        }
+        document.getElementById("idFigura").innerHTML = txt;
+      }
+      </script>
   </body>
 </html>

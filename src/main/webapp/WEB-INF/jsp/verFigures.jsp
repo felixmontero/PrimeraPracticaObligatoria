@@ -15,11 +15,11 @@
     let canvas = document.getElementById("canvas");
     let ctx = canvas.getContext("2d");
     
-    function drawPreview(size,xCord,yCord,tipo,color) {
+    function drawPreview(size,xCord,yCord,figura,color) {
 
       ctx.clearRect(0, 0, canvas.width, canvas.height);
     
-      switch (tipo) {
+      switch (figura) {
             case "circle":
                 
                 ctx.beginPath();

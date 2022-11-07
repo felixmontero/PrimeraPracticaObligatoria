@@ -21,15 +21,16 @@ public class Login extends HttpServlet {
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
-        String user = (String) session.getAttribute("user");
-        if (user == null) {
-            RequestDispatcher dispatcher =
-                    req.getRequestDispatcher("/WEB-INF/jsp/login.jsp");
-            dispatcher.forward(req, resp);
+
+        if (session.getAttribute("id") != null) {
+            resp.sendRedirect("/ventanaPrincipal");
+            return;
         }
+
         RequestDispatcher dispatcher =
-                req.getRequestDispatcher("/WEB-INF/jsp/figures.jsp");
+                req.getRequestDispatcher("/WEB-INF/jsp/login.jsp");
         dispatcher.forward(req, resp);
+
     }
 
     @Override

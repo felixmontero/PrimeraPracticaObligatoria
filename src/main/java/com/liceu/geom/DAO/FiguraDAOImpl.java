@@ -8,7 +8,7 @@ import java.util.List;
 public class FiguraDAOImpl implements FiguraDAO{
 
     static List<Figura> figuraList = new ArrayList<>();
-    static List<Figura> meFiguraList = new ArrayList<>();
+
 
 
     @Override
@@ -16,19 +16,14 @@ public class FiguraDAOImpl implements FiguraDAO{
         figuraList.add(m);
     }
 
-    public void saveMe (Figura m) {
-        meFiguraList.add(m);
-    }
+
 
     @Override
     public List<Figura> getAllFiguras() {
         return figuraList;
     }
 
-    @Override
-    public List<Figura> getAllMeFiguras() {
-        return meFiguraList;
-    }
+
 
     public void deleteFiguras(Figura figura){
         figuraList.remove(figura);

@@ -41,10 +41,10 @@
         </select>   
 
         <label for="xCord">Coordenada X:</label>
-        <input type="number" name="xCord" id="xCord" required>
+        <input type="number" name="xCord" id="xCord" required onchange="drawPreview()">
 
         <label for="yCord">Coordenada Y:</label>
-        <input type="number" name="yCord" id="yCord" required>
+        <input type="number" name="yCord" id="yCord" required onchange="drawPreview()">
 
         <br>
         <label for="size">Grandaria</label>

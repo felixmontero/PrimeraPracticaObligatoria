@@ -8,6 +8,7 @@ import com.liceu.geom.model.Usuario;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -73,17 +74,14 @@ public class FiguraService {
     }
 
     public List<Figura> getMeFigures(int idSession) {
-        List<Figura> misFiguras = figuraDAO.getAllFiguras();
-        for (Figura figura : misFiguras) {
-            //if (figuraDAO.getAllMeFiguras().size() > 0) {
-            figuraDAO.getAllMeFiguras().remove(figura);
-        }
+        List<Figura> misFiguras = new ArrayList<>();
+
         for (Figura figura : figuraDAO.getAllFiguras()) {
             if (figura.getIdUsuario() == idSession) {
-                figuraDAO.saveMe(figura);
+                misFiguras.add(figura);
             }
         }
-        return figuraDAO.getAllMeFiguras();
+        return misFiguras;
     }
 
     public boolean comprobacionNombre(String nombreFigura, int idSession) {
