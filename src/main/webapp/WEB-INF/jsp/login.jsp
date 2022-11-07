@@ -4,18 +4,28 @@
 <html>
 <head>
  <title>Login</title>
+
+  <style><%@include file="/WEB-INF/css/login.css"%></style>
+
 </head>
 <body>
- <h1> login </h1>
+<div id="login-form-wrap">
+<div class="form-field">
+ <h2>Login</h2>
+</div>
    <c:if test="${not empty message}">
    ${message}
    </c:if>
    <form method="post" action="/login">
-                Usuari: <input type="text" name="user">
-                <br>
+    <label for="username">Usuari:</label><br><br>
+      <div class="form-field">
+      <input type="text" placeholder="Poner Usuario" name="user"><br><br>
+      </div>
+      <div class="form-field">
+      <input type="submit" value="envia" class="btn">
+      </div>
 
-                <input type="submit" value="envia">
    </form>
-
+</div>
 </body>
 </html>

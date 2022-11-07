@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7ebeb03-5e59-4ac2-852a-0ccc29181ccb" name="Changes" comment="solucion de errores, popup y filter">
+    <list default="true" id="e7ebeb03-5e59-4ac2-852a-0ccc29181ccb" name="Changes" comment="error 2 figuras usuario">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/navbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/background.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/VentanaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/controllers/VentanaPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/geom/filters/LoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/geom/filters/LoginFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/figures.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/figures.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/meFigures.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/meFigures.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/totalFigures.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/totalFigures.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/verFigures.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/verFigures.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +49,11 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/fmont/IdeaProjects/testTomcat&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fmont\IdeaProjects\PrimeraPracticaObligatoria\src\main\webapp\WEB-INF\img" />
+    </key>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn deploy" />
@@ -161,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667847568894</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="error 2 figuras usuario">
+      <created>1667848407247</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1667848407247</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -199,6 +219,7 @@
     <MESSAGE value="eliminar figuras" />
     <MESSAGE value="Ver Figuras" />
     <MESSAGE value="solucion de errores, popup y filter" />
-    <option name="LAST_COMMIT_MESSAGE" value="solucion de errores, popup y filter" />
+    <MESSAGE value="error 2 figuras usuario" />
+    <option name="LAST_COMMIT_MESSAGE" value="error 2 figuras usuario" />
   </component>
 </project>

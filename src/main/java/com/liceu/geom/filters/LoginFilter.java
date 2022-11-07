@@ -11,11 +11,10 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebFilter(urlPatterns = { "/ventanaPrincipal","/totalFigures","/verFigures" }) // "/verFigures","/ventanaPrincipal","/totalFigures","/meFigures","/eliminarFigura"})
+@WebFilter(urlPatterns = { "/ventanaPrincipal","/totalFigures","/verFigures","/meFigures" }) // "/verFigures","/ventanaPrincipal","/totalFigures","/meFigures","/eliminarFigura"})
 public class LoginFilter extends HttpFilter {
     @Override
     protected void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws IOException, ServletException {
-        System.out.println("executa");
         HttpSession session = req.getSession();
         if(session.getAttribute("id") == null ) {
 
