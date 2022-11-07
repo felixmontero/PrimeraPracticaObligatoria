@@ -24,6 +24,7 @@
         <th>coordenada Y</th>
         <th>user</th>
         <th>Fecha</th>
+        <th>Acciones</th>
         
       </tr>
       <c:forEach var="figura" items="${figures}">
@@ -35,6 +36,17 @@
           <td>${figura.yCord}</td>
           <td>${figura.idUsuario}</td>
           <td>${figura.fecha}</td>
+          <td>
+            <form action="/meFigures" method="post">
+                <input type="hidden" name="idFigura" id="idFigura" value="${figura.idFigura}">
+                <input type="submit" value="ver">
+            </form>
+        </td>
+        <td>
+            <form action="/eliminarFigura" method="post">
+                <input type="hidden" name="idFigura" id="idFigura" value="${figura.idFigura}">
+                <input type="submit" value="Borrar">
+            </form>
         </tr>
       </c:forEach>
     </table>

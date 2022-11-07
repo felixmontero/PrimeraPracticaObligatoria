@@ -17,14 +17,13 @@
 
     <table>
       <tr>
-          <th>id</th>
-          <th>nombre</th>
-          <th>tipus</th>
-          <th>coordenada X</th>
-          <th>coordenada Y</th>
-          <th>userID</th>
-          <th>Fecha</th>
-
+        <th>id</th>
+        <th>nombre</th>
+        <th>tipus</th>
+        <th>coordenada X</th>
+        <th>coordenada Y</th>
+        <th>userID</th>
+        <th>Fecha</th>
       </tr>
       <c:forEach var="figura" items="${figures}">
         <tr>

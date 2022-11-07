@@ -20,7 +20,7 @@ public class MeFigurasController extends HttpServlet {
         HttpSession session = req.getSession();
         session.getAttribute("id");
         int sessionId = (int) session.getAttribute("id");
-       List<Figura> figures = figuraService.getMeFigures(sessionId);
+        List<Figura> figures = figuraService.getMeFigures(sessionId);
 
        req.setAttribute("figures",figures);
 
@@ -34,7 +34,7 @@ public class MeFigurasController extends HttpServlet {
 
 
         RequestDispatcher dispatcher =
-                req.getRequestDispatcher("/WEB-INF/jsp/meFigures.jsp");
+                req.getRequestDispatcher("/WEB-INF/jsp/verFigures.jsp");
         dispatcher.forward(req, resp);
     }
 }

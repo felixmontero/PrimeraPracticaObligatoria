@@ -1,7 +1,6 @@
 package com.liceu.geom.DAO;
 
 import com.liceu.geom.model.Figura;
-import com.liceu.geom.model.Message;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,5 +28,10 @@ public class FiguraDAOImpl implements FiguraDAO{
     @Override
     public List<Figura> getAllMeFiguras() {
         return meFiguraList;
+    }
+
+    public void deleteFiguras(Figura figura){
+        figuraList.remove(figura);
+
     }
 }

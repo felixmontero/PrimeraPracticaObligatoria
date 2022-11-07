@@ -11,5 +11,6 @@ public interface FiguraDAO {
     void saveMe (Figura m);
     List<Figura> getAllFiguras();
     List<Figura> getAllMeFiguras();
+    public void deleteFiguras(Figura figura);
 
 }

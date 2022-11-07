@@ -27,6 +27,8 @@ public class IndexControllers extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        req.getParameter("borrarFigura");
         String text = req.getParameter("text");
         textService.newText(text);
         resp.sendRedirect("/index");

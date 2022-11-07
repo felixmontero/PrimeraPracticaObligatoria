@@ -62,4 +62,23 @@ public class FiguraService {
         }
        return false;
     }
+
+    public Figura getMeFigura(int idFigura) {
+        List<Figura> misFiguras = figuraDAO.getAllFiguras();
+
+        for (Figura figura : misFiguras) {
+            if (figura.getIdFigura() == idFigura) {
+
+                    return figura;
+
+            }
+        }
+        return null;
+    }
+
+    public void removeFigura (Figura figura){
+
+        figuraDAO.deleteFiguras(figura);
+
+    }
 }
