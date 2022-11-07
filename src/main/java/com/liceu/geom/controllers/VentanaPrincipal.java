@@ -34,11 +34,10 @@ public class VentanaPrincipal extends HttpServlet {
         HttpSession session = req.getSession();
 
         String nombreFigura = req.getParameter("nombreFigura");
-
-        int coordenadaX = Integer.parseInt(req.getParameter("xCord"));
-        int coordenadaY = Integer.parseInt(req.getParameter("yCord"));
+        String coordenadaX = req.getParameter("xCord");
+        String coordenadaY = req.getParameter("yCord");
         String tipoFigura = req.getParameter("tipoFigura");
-        int size = Integer.parseInt(req.getParameter("size"));
+        String size = req.getParameter("size");
         String colorFigura = req.getParameter("color");
         boolean nombreRepetido = false;
 
@@ -60,7 +59,7 @@ public class VentanaPrincipal extends HttpServlet {
 
         String date = dateFormat.format(new Date());
 
-        figuraService.guardarFigura(nombreFigura, tipoFigura,date, coordenadaX, coordenadaY, size, tipoFigura, (int) session.getAttribute("id"));
+        figuraService.guardarFigura(nombreFigura, tipoFigura, date, coordenadaX, coordenadaY, size, tipoFigura, (int) session.getAttribute("id"), req);
         RequestDispatcher dispatcher =
                 req.getRequestDispatcher("/WEB-INF/jsp/figures.jsp");
         dispatcher.forward(req, resp);

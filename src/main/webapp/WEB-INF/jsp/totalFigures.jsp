@@ -37,8 +37,8 @@
           <td>${figura.idUsuario}</td>
           <td>${figura.fecha}</td>
           <td>
-            <form action="/meFigures" method="post">
-                <input type="hidden" name="idFigura" id="idFigura" value="${figura.idFigura}">
+            <form action="/verFigures" method="get">
+                <input type="hidden" name="idFigura" id="idFigura" value=${figura.idFigura}>
                 <input type="submit" value="ver">
             </form>
         </td>

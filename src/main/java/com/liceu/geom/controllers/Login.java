@@ -42,8 +42,9 @@ public class Login extends HttpServlet {
             resp.sendRedirect("/ventanaPrincipal");
             return;
         }
+        req.setAttribute("message", "Usuari i/o password no correctes");
         RequestDispatcher dispatcher =
-                req.getRequestDispatcher("/WEB-INF/jsp/figures.jsp");
+                req.getRequestDispatcher("/WEB-INF/jsp/login.jsp");
         dispatcher.forward(req, resp);
     }
 }

@@ -5,29 +5,26 @@
 <head>
  <title>Ver Figuras</title>
 </head>
-<body>
+<body onload= "drawPreview('${figura.size}' , '${figura.xCord}', '${figura.yCord}', '${figura.tipo}', '${figura.color}')">
  <h1> Veure Figura </h1>
 
- <canvas id="canvas" width="1024" height="768" style="border: solid black 1px;" onclick="drawPreview()"></canvas>
+ <canvas id="canvas" width="1024" height="768" style="border: solid black 1px;"></canvas>
 
 
  <script>
     let canvas = document.getElementById("canvas");
     let ctx = canvas.getContext("2d");
     
-    function drawPreview() {
-      let size = Number(document.getElementById("size").value);
-      let xCord = Number(document.getElementById("xCord").value);
-      let yCord = Number(document.getElementById("yCord").value);
-      let figura = document.getElementById("tipoFigura").value;
+    function drawPreview(size,xCord,yCord,tipo,color) {
+
       ctx.clearRect(0, 0, canvas.width, canvas.height);
     
-      switch (figura) {
+      switch (tipo) {
             case "circle":
                 
                 ctx.beginPath();
                 ctx.arc(xCord, yCord, size, 0, 2 * Math.PI);
-                ctx.fillStyle = document.getElementById("color").value;
+                ctx.fillStyle = color.value;
                 ctx.fill();
                 break;
     
@@ -35,7 +32,7 @@
             ctx.beginPath();
             ctx.beginPath();
             ctx.rect(xCord, yCord, size, size);
-            ctx.fillStyle = document.getElementById("color").value;
+            ctx.fillStyle = color.value;
             ctx.fill();
             break;
             case "triangle":
@@ -45,7 +42,7 @@
             ctx.lineTo(xCord, yCord + size);
             ctx.lineTo(xCord + size, yCord);
             ctx.closePath();
-            ctx.fillStyle = document.getElementById("color").value;
+            ctx.fillStyle = color.value;
             ctx.fill();
                 break;
             case "pentagon":
@@ -64,7 +61,7 @@
             ctx.setTransform(1, 0, 0, 1, 0, 0);
     
             ctx.closePath();
-            ctx.fillStyle = document.getElementById("color").value;
+            ctx.fillStyle = color.value;
             ctx.fill();
                 break;
     
@@ -83,7 +80,7 @@
             ctx.setTransform(1, 0, 0, 1, 0, 0);
     
             ctx.closePath();
-            ctx.fillStyle = document.getElementById("color").value;
+            ctx.fillStyle = color.value;
             
             
             ctx.fill();;
