@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -48,12 +49,17 @@ public class VentanaPrincipal extends HttpServlet {
         do {
             nombreRepetido = figuraService.comprobacionNombre(nombreFigura, sessionId);
 
-            if (nombreFigura.isEmpty() || nombreRepetido) {
+            if (nombreFigura.isEmpty()) {
                 int numeroRandom = (int) (Math.random() * 10 + 1);
                 nombreFigura = tipoFigura + numeroRandom;
+            } else if (nombreRepetido) {
+                PrintWriter pw = resp.getWriter();
+                pw.print("No pots crear 2 figures amb el mateix nom!!");
+                return;
             }
             nombreRepetido = figuraService.comprobacionNombre(nombreFigura, sessionId);
         } while (nombreRepetido);
+
 
         DateFormat dateFormat = new SimpleDateFormat("d MMM yyyy, HH:mm:ss z");
 
