@@ -8,7 +8,7 @@
   <style><%@include file="/WEB-INF/css/login.css"%></style>
 
 </head>
-<body>
+<body style="background-image: url(https://img.freepik.com/vector-gratis/fondo-geometrico_23-2148573776.jpg?w=2000);">
 <div id="login-form-wrap">
 <div class="form-field">
  <h2>Login</h2>
@@ -19,7 +19,7 @@
    <form method="post" action="/login">
     <label for="username">Usuari:</label><br><br>
       <div class="form-field">
-      <input type="text" placeholder="Poner Usuario" name="user"><br><br>
+      <input type="text" placeholder="Poner Usuario" name="user" required><br><br>
       </div>
       <div class="form-field">
       <input type="submit" value="envia" class="btn">

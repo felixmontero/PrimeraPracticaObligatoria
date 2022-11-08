@@ -11,7 +11,7 @@
     <title>Figures</title>
   </head>
 
-  <body>
+  <body  style="background-image: url(https://img.freepik.com/vector-gratis/fondo-geometrico_23-2148573776.jpg?w=2000);">
   <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="ventanaPrincipal">Crear</a>
@@ -46,28 +46,30 @@
         
       </tr>
       </thead>
+
       <c:forEach var="figura" items="${figures}">
         <tr>
-          <td scope="row">${figura.idFigura}</td>
-          <td scope="row">${figura.nombreFigura}</td>
-          <td scope="row">${figura.tipo}</td>
-          <td scope="row">${figura.xCord}</td>
-          <td scope="row">${figura.yCord}</td>
-          <td scope="row">${figura.idUsuario}</td>
-          <td scope="row">${figura.fecha}</td>
-          <td scope="row">
+          <td scope="row" class="table-light">${figura.idFigura}</td>
+          <td scope="row" class="table-light">${figura.nombreFigura}</td>
+          <td scope="row" class="table-light">${figura.tipo}</td>
+          <td scope="row" class="table-light">${figura.xCord}</td>
+          <td scope="row" class="table-light">${figura.yCord}</td>
+          <td scope="row" class="table-light">${figura.idUsuario}</td>
+          <td scope="row" class="table-light">${figura.fecha}</td>
+          <td scope="row" class="table-light">
             <form action="/verFigures" method="get">
                 <input type="hidden" name="idFigura" id="idFigura" value=${figura.idFigura}>
-                <input type="submit" value="ver">
+                <input type="submit" value="ver" class="btn btn-dark">
             </form>
         </td>
-        <td scope="row">
+        <td scope="row" class="table-light">
             <form action="/eliminarFigura" method="post" onsubmit=" return popup()">
                 <input type="hidden" name="idFigura" id="idFigura" value="${figura.idFigura}">
-                <input type="submit" value="Borrar">
+                <input type="submit" value="Borrar" class="btn btn-dark">
             </form>
         </td>
       </c:forEach>
+
     </table>
 
     <script>

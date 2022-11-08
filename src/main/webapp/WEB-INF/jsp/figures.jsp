@@ -5,15 +5,16 @@
 
 <html>
     <head>
-
+       <style><%@include file="/WEB-INF/css/canvas.css"%></style>
        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style><%@include file="/WEB-INF/css/canvas.css"%></style>
       <title>Figures</title>
     </head>
 
-<body>
+<body  style="background-image: url(https://wallpapers.com/images/hd/white-textured-paper-439vozmsl9bybc8a.jpg);">
    <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="ventanaPrincipal">Crear</a>
@@ -31,7 +32,9 @@
    </header>
 
     <h1>Figures</h1>
-    <canvas id="canvas" width="1024" height="768" style="border: solid black 1px;" onclick="drawPreview()"></canvas>
+    <div id="clase" class="clase">
+    <canvas id="canvas" class="canvas" width="1024" height="768" style="background-color: white; border: solid black 1px;" onclick="drawPreview()"></canvas>
+    </div>
     <form action="/ventanaPrincipal" method="post">
 
         <label for="nombreFigura">Nombre de la figura:</label>

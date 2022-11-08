@@ -5,8 +5,9 @@
 <head>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
  <title>Ver Figuras</title>
+ <style><%@include file="/WEB-INF/css/canvas.css"%></style>
 </head>
-<body onload= "drawPreview('${figura.size}' , '${figura.xCord}', '${figura.yCord}', '${figura.tipo}', '${figura.color}')">
+<body onload= "drawPreview('${figura.size}' , '${figura.xCord}', '${figura.yCord}', '${figura.tipo}', '${figura.color}')"  style="background-image: url(https://wallpapers.com/images/hd/white-textured-paper-439vozmsl9bybc8a.jpg);">
 <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="ventanaPrincipal">Crear</a>
@@ -25,7 +26,7 @@
 
  <h1> Veure Figura </h1>
 
- <canvas id="canvas" width="1024" height="768" style="border: solid black 1px;"></canvas>
+ <canvas id="canvas" class="canvas" width="1024" height="768" style="border: solid black 1px" ></canvas>
 
 
  <script>

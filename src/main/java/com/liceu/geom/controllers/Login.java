@@ -21,8 +21,9 @@ public class Login extends HttpServlet {
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
+        String nombreUsuario= req.getParameter("user");
 
-        if (session.getAttribute("id") != null) {
+        if (session.getAttribute("id") != null ) {
             resp.sendRedirect("/ventanaPrincipal");
             return;
         }
@@ -37,13 +38,13 @@ public class Login extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String nombreUsuario = (String) req.getParameter("user");
         Usuario usuario = usuarioService.guardarUsuario(nombreUsuario);
-        if (usuario != null) {
+        if (!nombreUsuario.isEmpty()) {
             HttpSession session = req.getSession();
             session.setAttribute("id", usuario.getId());
             resp.sendRedirect("/ventanaPrincipal");
             return;
         }
-        req.setAttribute("message", "Usuari i/o password no correctes");
+        req.setAttribute("message", "Nom de usuari incorrecte");
         RequestDispatcher dispatcher =
                 req.getRequestDispatcher("/WEB-INF/jsp/login.jsp");
         dispatcher.forward(req, resp);
