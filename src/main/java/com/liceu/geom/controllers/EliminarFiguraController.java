@@ -29,6 +29,7 @@ public class EliminarFiguraController extends HttpServlet {
             return;
         }
 
-        resp.getWriter().println("no pots eliminar aquesta figura");
+        resp.getWriter().println("no pots eliminar una figura que no es teva figura");
+        resp.setHeader("Refresh", "4; URL=/ventanaPrincipal");
     }
 }

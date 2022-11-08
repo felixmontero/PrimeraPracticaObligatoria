@@ -5,7 +5,7 @@
 <head>
  <title>Login</title>
 
-  <style><%@include file="/WEB-INF/css/login.css"%></style>
+<link rel="stylesheet" href="/css/login.css">
 
 </head>
 <body style="background-image: url(https://img.freepik.com/vector-gratis/fondo-geometrico_23-2148573776.jpg?w=2000);">

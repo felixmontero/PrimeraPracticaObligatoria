@@ -55,6 +55,7 @@ public class VentanaPrincipal extends HttpServlet {
             } else if (nombreRepetido) {
                 PrintWriter pw = resp.getWriter();
                 pw.print("No pots crear 2 figures amb el mateix nom!!");
+                resp.setHeader("Refresh", "4; URL=/ventanaPrincipal");
                 return;
             }
             nombreRepetido = figuraService.comprobacionNombre(nombreFigura, sessionId);
